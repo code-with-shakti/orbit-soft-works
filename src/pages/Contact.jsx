@@ -181,7 +181,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-label-xs text-on-surface-variant mb-1">PHONE</p>
+                    <p className="font-body-lg text-body-lg">+91 7205525289</p>
                     <p className="font-body-lg text-body-lg">+91 7978010840</p>
+                    
                   </div>
                 </div>
               </div>
@@ -284,10 +286,11 @@ const Contact = () => {
                     onChange={handleChange}
                   >
                     <option value="">Select a budget range...</option>
-                    <option value="$10k - $25k">$10k - $25k</option>
-                    <option value="$25k - $50k">$25k - $50k</option>
-                    <option value="$50k - $100k">$50k - $100k</option>
-                    <option value="$100k+">$100k+</option>
+<option value="Under ₹25,000">Under ₹25,000</option>
+<option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000</option>
+<option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+<option value="₹1,00,000 - ₹3,00,000">₹1,00,000 - ₹3,00,000</option>
+<option value="₹3,00,000+">₹3,00,000+</option>
                   </select>
                 </div>
                 <div className="md:col-span-2">
