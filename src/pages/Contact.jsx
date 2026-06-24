@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { HeroEntranceStagger, HeroItem } from '../components/ui/hero-entrance';
 import mapImg from '../assets/contact/map-bhubaneswar.jpg';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const revealRefs = useRef([]);
@@ -16,7 +17,6 @@ const Contact = () => {
   const [status, setStatus] = useState({ type: '', message: '' });
 
   useEffect(() => {
-    document.title = "Contact Us | Get a Free Software Project Quote - Orbit Technologies";
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -124,6 +124,10 @@ const Contact = () => {
 
   return (
     <div className="relative">
+      <SEO 
+        title="Contact Orbit Softworks | Get a Free Software Project Quote" 
+        description="Contact Orbit Softworks in Bhubaneswar. We serve Khandagiri, Kalinga Vihar, Patrapada and nearby areas with custom software, websites, and apps."
+      />
       {/* ATMOSPHERIC BACKGROUND ELEMENTS */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px]"></div>
@@ -163,7 +167,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-label-xs text-on-surface-variant mb-1">HEADQUARTERS</p>
-                    <p className="font-body-lg text-body-lg">Bhubaneswar, Odisha, India</p>
+                    <p className="font-body-lg text-body-lg">Khandagiri, Bhubaneswar</p>
+                    <p className="font-body-sm text-on-surface-variant mt-1">Odisha, India</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

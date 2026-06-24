@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { HeroEntranceStagger, HeroItem } from '../components/ui/hero-entrance';
+import SEO from '../components/SEO';
 
 // ── Local service images ──
 import svcWebsitesImg    from '../assets/services/service-01-websites.jpg';
@@ -18,7 +19,6 @@ const Services = () => {
   const revealRefs = useRef([]);
 
   useEffect(() => {
-    document.title = "Our Services | Custom Software, ERP, CRM & Web Development - Orbit Technologies";
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -39,6 +39,10 @@ const Services = () => {
 
   return (
     <div className="relative">
+      <SEO 
+        title="Our Services | Custom Software, ERP, CRM & Web Development - Orbit Softworks" 
+        description="Orbit Softworks offers Custom Software Development, Website Development, Android Apps, ERP, CRM, and Digital Marketing services in Bhubaneswar."
+      />
       {/* Hero Section */}
       <section className="relative min-h-[614px] flex flex-col items-center justify-center overflow-hidden px-grid-margin">
         {/* Background Orbit Ring */}
@@ -82,8 +86,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Node.js</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Price: ₹10k – ₹1L+</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Get Quote</button>
+              <Link to="/services/web-development">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Learn More</button>
               </Link>
             </div>
             <div className="order-1 md:order-2">
@@ -114,8 +118,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">PostgreSQL</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Billing Software</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Get Quote</button>
+              <Link to="/services/custom-software">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Learn More</button>
               </Link>
             </div>
           </div>
@@ -136,8 +140,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">PostgreSQL</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">AWS Cloud</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Get Quote</button>
+              <Link to="/services/erp-pos-crm">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Learn More</button>
               </Link>
             </div>
             <div className="order-1 md:order-2">
@@ -167,8 +171,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Node.js</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">MongoDB</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Get Quote</button>
+              <Link to="/services/erp-pos-crm">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Learn More</button>
               </Link>
             </div>
           </div>
@@ -188,8 +192,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">SQLite</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Electron</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Get Quote</button>
+              <Link to="/services/erp-pos-crm">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Learn More</button>
               </Link>
             </div>
             <div className="order-1 md:order-2">
@@ -214,8 +218,8 @@ const Services = () => {
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Delivery Apps, Staff Trackers & Booking Apps</li>
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> White-Label Dashboards, React Native & Flutter</li>
               </ul>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Get Quote</button>
+              <Link to="/services/app-development">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(174,198,255,0.4)] transition-all">Learn More</button>
               </Link>
             </div>
           </div>
@@ -235,8 +239,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Node.js</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Stripe / Razorpay</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all">Get Quote</button>
+              <Link to="/services/web-development">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all">Learn More</button>
               </Link>
             </div>
             <div className="order-1 md:order-2">
@@ -266,8 +270,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Tailwind CSS</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Chart.js</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all">Get Quote</button>
+              <Link to="/services/custom-software">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all">Learn More</button>
               </Link>
             </div>
           </div>
@@ -287,8 +291,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Node.js</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">MongoDB</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all">Get Quote</button>
+              <Link to="/services/custom-software">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all">Learn More</button>
               </Link>
             </div>
             <div className="order-1 md:order-2">
@@ -318,8 +322,8 @@ const Services = () => {
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Python</span>
                 <span className="bg-surface-container-high px-3 py-1 rounded-lg text-label-xs text-on-surface-variant">Zapier API</span>
               </div>
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all">Get Quote</button>
+              <Link to="/services/digital-marketing">
+                <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all">Learn More</button>
               </Link>
             </div>
           </div>

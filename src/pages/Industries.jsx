@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { HeroEntranceStagger, HeroItem } from '../components/ui/hero-entrance';
+import SEO from '../components/SEO';
 
 // ── Local industries images ──
 import heroGridMainImg        from '../assets/industries/hero-grid-main.jpg';
@@ -18,7 +19,6 @@ const Industries = () => {
   const revealRefs = useRef([]);
 
   useEffect(() => {
-    document.title = "Target Industries | Custom Domain Infrastructure - Orbit Technologies";
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -39,6 +39,10 @@ const Industries = () => {
 
   return (
     <div className="relative w-full">
+      <SEO 
+        title="Target Industries | Custom Domain Infrastructure - Orbit Softworks" 
+        description="Orbit Softworks builds specialized custom software solutions for Manufacturing, Schools, Restaurants, Clinics, Retail, Logistics, Gyms, and Wholesale industries in Bhubaneswar."
+      />
       {/* Hero Section */}
       <section className="relative h-[716px] w-full flex items-center overflow-hidden bg-surface-container-lowest">
         {/* Background Orbital Effects */}

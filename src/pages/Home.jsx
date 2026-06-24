@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import logoImg from '../assets/logo.jpeg';
 import bentoWebDesignImg from '../assets/home/bento-web-design.jpg';
 import { HeroSection } from '../components/ui/hero-section';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const revealRefs = useRef([]);
 
   useEffect(() => {
-    document.title = "Orbit Technologies | Best Software Development Company for Startups & Small Businesses";
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,6 +27,10 @@ const Home = () => {
 
   return (
     <>
+      <SEO 
+        title="Best Software Company in Khandagiri, Bhubaneswar | Orbit Softworks" 
+        description="Orbit Softworks (OrbitSoftworks) is the best software company in Khandagiri, Bhubaneswar. We build custom software, Android apps, ERP/POS systems, and business websites."
+      />
       {/* ── SECTION 1: HERO ── */}
       <HeroSection />
 
@@ -109,7 +113,7 @@ const Home = () => {
         <div className="grid md:grid-cols-2">
           <div className="bg-surface py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-end">
             <div className="max-w-md w-full">
-              <h2 className="text-on-surface mb-8" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(2rem, 3vw, 2.5rem)', fontWeight: 700 }}>Why Leading Businesses Choose Orbit.</h2>
+              <h2 className="text-on-surface mb-8" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(2rem, 3vw, 2.5rem)', fontWeight: 700 }}>Why Leading Businesses Choose Orbit Softworks.</h2>
               <div className="flex items-center gap-4 text-primary">
                 <span className="w-12 h-[1px] bg-primary" />
                 <span className="text-xs font-bold uppercase tracking-widest">Excellence By Default</span>

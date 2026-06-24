@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logoImg from '../assets/logo.jpeg';
 import brandImg from '../assets/brand.jpeg';
 import { HeroEntranceStagger, HeroItem } from '../components/ui/hero-entrance';
+import SEO from '../components/SEO';
 
 // ── Local about page images ──
 import heroTeamImg      from '../assets/about/hero-team-collaboration.jpg';
@@ -15,7 +16,6 @@ const About = () => {
   const revealRefs = useRef([]);
 
   useEffect(() => {
-    document.title = "About Orbit Technologies | Best Software Development Company";
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,6 +34,10 @@ const About = () => {
 
   return (
     <div className="relative">
+      <SEO 
+        title="About Orbit Softworks | Trusted Technology Partner in Bhubaneswar" 
+        description="Learn about Orbit Softworks (formerly Orbit Technology), a leading team of developers and strategists in Bhubaneswar delivering custom software and digital growth."
+      />
       {/* Atmospheric Effects */}
       <div className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none">
         <div className="nebula-glow absolute top-[-20%] left-[-10%] w-[60%] h-[60%] opacity-40"></div>
@@ -61,8 +65,11 @@ const About = () => {
               </h1>
             </HeroItem>
             <HeroItem>
-              <p className="text-on-surface-variant text-lg max-w-lg">
+              <p className="text-on-surface-variant text-lg max-w-lg mb-4">
                 A constellation of developers, designers, and visionaries orbiting the nexus of technology and human experience. We turn complex challenges into elegant software solutions.
+              </p>
+              <p className="text-on-surface-variant text-sm max-w-lg italic opacity-80">
+                Orbit Softworks is the new brand identity of Orbit Technology, a Bhubaneswar-based digital solutions provider.
               </p>
             </HeroItem>
           </HeroEntranceStagger>

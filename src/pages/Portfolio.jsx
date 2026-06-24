@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeroEntranceStagger, HeroItem } from '../components/ui/hero-entrance';
+import SEO from '../components/SEO';
 
 const projects = [
   {
@@ -77,7 +78,6 @@ const Portfolio = () => {
       : projects.filter((p) => p.category === activeFilter);
 
   useEffect(() => {
-    document.title = "Our Portfolio | Enterprise ERPs, Web Apps & Mobile Portfolios - Orbit Technologies";
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -96,6 +96,10 @@ const Portfolio = () => {
 
   return (
     <div className="relative">
+      <SEO 
+        title="Our Portfolio | Enterprise ERPs, Web Apps & Mobile Apps - Orbit Softworks" 
+        description="Explore the Orbit Softworks portfolio. We have delivered high-performance ERPs, POS systems, mobile apps, and business websites for companies in Bhubaneswar and beyond."
+      />
       {/* Hero Section */}
       <section className="relative min-h-[512px] flex items-center justify-center overflow-hidden">
         <div className="nebula-glow absolute inset-0 -z-10"></div>
